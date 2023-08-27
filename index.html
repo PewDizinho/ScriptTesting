@@ -4,17 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: rgb(31, 31, 31);
+        }
+    </style>
     <title>Pew's Test repository</title>
 </head>
 
 <body>
 
+
+    <p id="nick">Nome: </p>
+    <p id="hp">Vida: </p>
+
     <script>
 
         let urlParams = new URLSearchParams(window.location.search);
+        document.getElementById('nick') = urlParams.get('nick');
+        document.getElementById('hp') = urlParams.get('hp');
 
         // document.getElementById('image') = urlParams.get('imgUrl');
-//https://pewdizinho.github.io/pages/myjobs/jobInfo.html?title=Pew%27s%20Cavern&description=Uma%20loja%20que%20usei%20como%20mediadora%20para%20meu%20trabalho%20de%20freelancer
 
     </script>
 </body>
