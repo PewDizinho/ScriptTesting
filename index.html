@@ -17,18 +17,20 @@
     <title>Pew's Test repository</title>
 </head>
 
-<body>
+<body onload="myFunc()">
 
 
     <p id="nick">Nome: </p>
     <p id="hp">Vida: </p>
 
     <script>
-        document.addEventListener("load", () => {
+        function myFunc() {
+
             let urlParams = new URLSearchParams(window.location.search);
-            document.getElementById('nick') = urlParams.get('nick');
-            document.getElementById('hp') = urlParams.get('hp');
-        });
+            document.getElementById('nick').innerText = urlParams.get('nick');
+            document.getElementById('hp').innerText = urlParams.get('hp');
+            console.log(urlParams.get('nick'))
+        }
 
 
         // document.getElementById('image') = urlParams.get('imgUrl');
