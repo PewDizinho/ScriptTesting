@@ -24,10 +24,12 @@
     <p id="hp">Vida: </p>
 
     <script>
+        object.addEventListener("load", () => {
+            let urlParams = new URLSearchParams(window.location.search);
+            document.getElementById('nick') = urlParams.get('nick');
+            document.getElementById('hp') = urlParams.get('hp');
+        });
 
-        let urlParams = new URLSearchParams(window.location.search);
-        document.getElementById('nick') = urlParams.get('nick');
-        document.getElementById('hp') = urlParams.get('hp');
 
         // document.getElementById('image') = urlParams.get('imgUrl');
 
